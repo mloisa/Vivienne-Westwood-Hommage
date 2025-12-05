@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Nunito:wght@400;600&display=swap');
+
+:root {
+  --azul: #0D0628;
+  --vermelho: #7A0000;
+  --bege: #FAF2E4;
+  --cinza: #E6E6E6;
+  --fonte-principal: "Raleway", sans-serif;
+  --fonte-suporte: "Nunito", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--azul);
+  color: var(--azul);
+}
+
+header.cabecalho {
+  text-align: center;
+  background-color: var(--azul);
+  padding: 20px 0;
+}
+
+header.cabecalho img {
+  height: 80px;
+}
+
+.navegacao {
+  margin: 20px 0;
+}
+
+.navegacao .menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navegacao .menu li {
+  margin-bottom: 10px;
+}
+
+.navegacao .menu a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--azul);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.navegacao .menu a:hover {
+  background-color: rgb(56, 54, 97);
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2#form-titulo {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--azul);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form .mb-3 {
+  margin-bottom: 15px;
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+form input[type="text"],
+form input[type="url"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--cinza);
+  font-family: var(--fonte-suporte);
+  font-size: 1rem;
+}
+
+form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+form button,
+form a.btn {
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+form button.btn-dark {
+  background-color: var(--azul);
+  color: white;
+  transition: background 0.3s ease;
+}
+
+form button.btn-dark:hover {
+  background-color: rgb(36, 32, 74);
+}
+
+form a.btn-secondary {
+  background-color: var(--cinza);
+  color: var(--azul);
+  text-decoration: none;
+}
+
+form a.btn-secondary:hover {
+  background-color: rgb(210, 210, 210);
+}
+
+#mensagem {
+  font-weight: 600;
+  margin-bottom: 10px;
+  min-height: 20px;
+  text-align: center;
+}
+
+.login_area {
+  background-color: var(--azul);
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.login_area img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.login_area form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login_area input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: none;
+  width: 80%;
+}
+
+.login_area button {
+  background-color: var(--vermelho);
+  padding: 10px;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  width: 50%;
+  margin-top: 5px;
+}
+
+.login_area button:hover {
+  background-color: rgb(120, 0, 0);
+}
+
+.login_area a {
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.publish {
+  margin-top: 20px;
+}
+
+.publish a.btn {
+  background-color: white;
+  color: var(--azul);
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.publish a.btn:hover {
+  background-color: rgb(220,220,220);
+}
+
+footer.rodape {
+  text-align: center;
+  background-color: var(--azul);
+  color: white;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+footer.rodape img {
+  height: 80px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .login_area input, .login_area button {
+    width: 90%;
+  }
+
+  .publish a.btn {
+    width: 80%;
+  }
+}

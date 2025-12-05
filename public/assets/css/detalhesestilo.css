@@ -1,0 +1,111 @@
+#banner {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(13, 6, 40, 0.5);
+  border-radius: 20px;
+}
+
+#titulo-banner {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 1;
+}
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  color: var(--azul);
+}
+
+#descricao {
+  color: var(--vermelho);
+  font-style: italic;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.text-muted {
+  color: #666 !important;
+}
+
+#conteudo {
+    text-align: justify;
+  line-height: 1.7;
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  text-align: center;
+}
+
+.galeria div {
+  flex: 45%;
+  max-width: 500px;
+}
+
+.galeria img {
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.03);
+}
+
+.galeria p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.galeria img {
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.03);
+}
+.btn-voltar {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.btn-voltar a {
+  background-color: var(--azul);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-voltar a:hover {
+  background-color: #1a1040;
+}

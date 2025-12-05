@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin | Vivienne Westwood</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="./assets/js/app.js"></script>
+</head>
+<body class="container py-5">
+
+<h1>CRUD de Coleções e Acessórios</h1>
+
+<form id="formCriar" class="mb-5">
+  <input type="text" placeholder="Título" id="titulo" class="form-control mb-2" required />
+  <textarea placeholder="Descrição" id="descricao" class="form-control mb-2" required></textarea>
+  <input type="text" placeholder="Categoria (colecoes/acessorios)" id="categoria" class="form-control mb-2" required />
+  <input type="text" placeholder="URL da Imagem Principal" id="imagem" class="form-control mb-2" required />
+  <button type="submit" class="btn btn-success">Criar Item</button>
+</form>
+
+<div id="listaItens"></div>
+
+<script>
+function mostrarItens() {
+  const lista = document.getElementById("listaItens");
+  lista.innerHTML = "";
+  ["colecoes","acessorios"].forEach(tipo=>{
+    dados[tipo].forEach(item=>{
+      const div = document.createElement("div");
+      div.className="mb-2";
+      div.innerHTML = `
+        <strong>${item.titulo}</strong> (${tipo})
+        <button onclick='editarItem("${tipo}",${item.id})' class="btn btn-primary btn-sm">Editar</button>
+        <button onclick='deletarItem("${tipo}",${item.id}); mostrarItens()' class="btn btn-danger btn-sm">Excluir</button>
+      `;
+      lista.appendChild(div);
+    })
+  })
+}
+
+document.getElementById("formCriar").addEventListener("submit", e=>{
+  e.preventDefault();
+  criarItem(
+    document.getElementById("categoria").value,
+    {
+      titulo: document.getElementById("titulo").value,
+      descricao: document.getElementById("descricao").value,
+      conteudo: document.getElementById("descricao").value,
+      categoria: document.getElementById("categoria").value,
+      autor: "Vivienne Westwood",
+      data: new Date().toISOString(),
+      imagem_principal: document.getElementById("imagem").value,
+      imagens_complementares:[]
+    }
+  );
+  mostrarItens();
+  e.target.reset();
+});
+
+function editarItem(tipo,id){
+  let item = dados[tipo].find(i=>i.id===id);
+  const novoTitulo = prompt("Novo título:",item.titulo);
+  const novaDescricao = prompt("Nova descrição:",item.descricao);
+  if(novoTitulo && novaDescricao){
+    atualizarItem(tipo,id,{titulo:novoTitulo,descricao:novaDescricao});
+    mostrarItens();
+  }
+}
+
+mostrarItens();
+</script>
+</body>
+</html>

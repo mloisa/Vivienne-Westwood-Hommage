@@ -1,0 +1,93 @@
+{
+  "colecoes": [
+    {
+      "id": "1",
+      "titulo": "Vive la Cocotte | FW1995",
+      "descricao": "Corsets vitorianos e saias esvoaçantes reafirmam o domínio de Westwood sobre o passado reinventado.",
+      "conteudo": "Apresentada na primavera/verão de 1995, a coleção 'Vive la Cocotte' revisitou a moda vitoriana com um toque provocante e teatral. Corsets estruturados, saias amplas e tecidos leves criaram uma estética que mistura sensualidade e história.",
+      "categoria": "Coleções destaque",
+      "autor": "Vivienne Westwood",
+      "destaque": true,
+      "data": "1995-09-15",
+      "imagem_principal": "./assets/imagens/bannerfw1995.jpg",
+      "imagens_complementares": [
+        { "id": 1, "src": "./assets/imagens/vivispring1995rtw.PNG", "descricao": "Desfile Vive la Cocotte SS1995" },
+        { "id": 2, "src": "./assets/imagens/VIVIENNE-WESTWOOD-FALL-1995-RTW-035.webp", "descricao": "Desfile Vive la Cocotte FW1995" }
+      ]
+    },
+    {
+      "id": "2",
+      "titulo": "Anglomania | FW1993",
+      "descricao": "Um mix de tradição britânica e rebeldia francesa, com alfaiataria desconstruída e estampas ousadas.",
+      "conteudo": "A coleção 'Anglomania' da temporada outono/inverno 1993 uniu o rigor da alfaiataria inglesa com a irreverência da moda francesa. Foi uma celebração da dualidade entre o punk e a elegância clássica.",
+      "categoria": "Coleções destaque",
+      "autor": "Vivienne Westwood",
+      "destaque": true,
+      "data": "1993-03-12",
+      "imagem_principal": "./assets/imagens/fw93anglomania.jpg",
+      "imagens_complementares": [
+        { "id": 1, "src": "./assets/imagens/vivifall1993.jpg", "descricao": "Look da coleção Anglomania FW1993" },
+        { "id": 2, "src": "./assets/imagens/VIVIENNE-WESTWOOD-FALL-1993-RTW-33.webp", "descricao": "Look da coleção Anglomania FW1993" }
+      ]
+    },
+    {
+      "id": "3",
+      "titulo": "Café Society | FW1994",
+      "descricao": "Luxo decadente com referências aos anos 1930, essa coleção brilhou com silhuetas glamourosas.",
+      "conteudo": "Inspirada na elite artística dos anos 1930, 'Café Society' apresentou um glamour nostálgico, com tecidos ricos, drapeados e cortes sofisticados — um tributo à elegância atemporal.",
+      "categoria": "Coleções destaque",
+      "autor": "Vivienne Westwood",
+      "destaque": false,
+      "data": "1994-10-01",
+      "imagem_principal": "./assets/imagens/FW9495Onlibertybanner.jpg",
+      "imagens_complementares": [
+        { "id": 1, "src": "./assets/imagens/vivifall1994.jpg", "descricao": "Detalhe da passarela Café Society FW1994" },
+        { "id": 2, "src": "./assets/imagens/VIVINENNE-WESTWOOD-FALL-1994-039.webp", "descricao": "Detalhe da passarela Café Society FW1994" }
+      ]
+    }
+  ],
+  "acessorios": [
+    {
+      "id": "1",
+      "titulo": "Tiny Orb Pendant",
+      "descricao": "O clássico em sua forma mais delicada — o pingente Tiny Orb combina o icônico símbolo da marca com sofisticação sutil para o dia a dia.",
+      "conteudo": "O Tiny Orb Pendant é uma versão minimalista do icônico símbolo de Westwood, representando a união entre o passado (o globo) e o futuro (o anel de Saturno).",
+      "categoria": "Acessórios em alta",
+      "autor": "Vivienne Westwood",
+      "destaque": true,
+      "data": "2023-04-10",
+      "imagem_principal": "./assets/imagens/tinyorb.jpg",
+      "imagens_complementares": [
+        { "id": 1, "src": "./assets/imagens/tinyorb.jpg", "descricao": "Pingente Tiny Orb em close" }
+      ]
+    },
+    {
+      "id": "2",
+      "titulo": "Crystal Necklace",
+      "descricao": "Um colar que reflete o espírito dramático de Westwood: exuberante, brilhante e inconfundível.",
+      "conteudo": "O Crystal Necklace combina pedras cintilantes com o emblemático Orb, simbolizando o equilíbrio entre extravagância e sofisticação — traço marcante da designer.",
+      "categoria": "Acessórios em alta",
+      "autor": "Vivienne Westwood",
+      "destaque": false,
+      "data": "2023-06-22",
+      "imagem_principal": "./assets/imagens/PLATINUM-CRYSTAL-Crystal_002_large.jpg",
+      "imagens_complementares": [
+        { "id": 1, "src": "./assets/imagens/PLATINUM-CRYSTAL-Crystal_002_large.jpg", "descricao": "Detalhe do Crystal Necklace" }
+      ]
+    },
+    {
+      "id": "3",
+      "titulo": "Hazel Bag",
+      "descricao": "Elegante e estruturada, a Hazel Bag une design clássico com o DNA rebelde da marca — perfeita para quem carrega estilo e atitude.",
+      "conteudo": "A Hazel Bag reflete o equilíbrio entre tradição e irreverência, com linhas estruturadas e o icônico logotipo Orb metalizado no fecho.",
+      "categoria": "Acessórios em alta",
+      "autor": "Vivienne Westwood",
+      "destaque": false,
+      "data": "2024-02-08",
+      "imagem_principal": "./assets/imagens/hazelbag.jpg",
+      "imagens_complementares": [
+        { "id": 1, "src": "./assets/imagens/hazelbag.jpg", "descricao": "Bolsa Hazel em couro estruturado" }
+      ]
+    }
+  ]
+}

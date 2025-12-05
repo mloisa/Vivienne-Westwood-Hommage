@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhes | Vivienne Westwood</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/detalhesestilo.css" />
+</head>
+
+<body>
+  <header class="cabecalho text-center my-4">
+    <img src="./assets/imagens/logo.png" alt="Logo Vivienne Westwood" />
+  </header>
+
+  <main class="conteudo container text-center">
+    <section id="banner" class="banner mb-4">
+      <div class="banner-overlay"></div>
+      <h1 id="titulo-banner"></h1>
+    </section>
+
+    <p id="descricao" class="lead mt-4"></p>
+
+    <div class="text-muted mb-4">
+      <span><strong>Categoria:</strong> <span id="categoria"></span></span>
+      · <span><strong>Autor:</strong> <span id="autor"></span></span>
+      · <span><strong>Data:</strong> <span id="data"></span></span>
+    </div>
+
+    <p id="conteudo"></p>
+
+    <section class="galeria row mt-5" id="galeria"></section>
+
+    <section class="editar mb-4">
+      <button class="btn btn-primary me-2" id="btn-editar">Editar</button>
+      <button class="btn btn-danger" id="btn-excluir">Excluir</button>
+    </section>
+
+    <div class="btn-voltar mb-5">
+      <a href="index.html" class="btn btn-dark">← Voltar</a>
+    </div>
+  </main>
+
+  <footer class="rodape text-center">
+    <p>Todos os direitos reservados &copy; 2025</p>
+    <img src="./assets/imagens/logotipo.png" alt="Logotipo" />
+  </footer>
+
+  <script src="./assets/js/detalhes.js"></script>
+</body>
+</html>
