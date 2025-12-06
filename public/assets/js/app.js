@@ -16,12 +16,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     const acessoriosContainer = document.getElementById("acessorios-container");
     const carousel = document.getElementById("carousel-itens");
 
+    // =======================
+    //   RENDER COLEÇÕES
+    // =======================
     colecoes.forEach((colecao, index) => {
-      // Se o post não tiver ID, gera um
       if (!colecao.id) {
         colecao.id = gerarId();
       }
 
+      // Carrossel
       if (colecao.destaque) {
         const activeClass = index === 0 ? "active" : "";
         carousel.innerHTML += `
@@ -34,8 +37,9 @@ document.addEventListener("DOMContentLoaded", async () => {
           </div>`;
       }
 
+      // Cards
       colecoesContainer.innerHTML += `
-        <div class="col">
+        <div class="col colecao-card">
           <div class="card h-100">
             <img src="${colecao.imagens_complementares[0].src}" class="card-img-top img-fluid" alt="${colecao.titulo}" />
             <div class="card-body d-flex flex-column">
@@ -47,6 +51,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>`;
     });
 
+    // =======================
+    //   RENDER ACESSÓRIOS
+    // =======================
     acessorios.forEach((acessorio) => {
       if (!acessorio.id) {
         acessorio.id = gerarId();
@@ -63,6 +70,30 @@ document.addEventListener("DOMContentLoaded", async () => {
             </div>
           </div>
         </div>`;
+    });
+
+    // =======================
+    //   BUSCA FUNCIONANDO
+    // =======================
+
+    const inputBusca = document.getElementById("busca-colecoes");
+
+    inputBusca.addEventListener("input", () => {
+      const termo = inputBusca.value.toLowerCase();
+
+      // Todos os cards já renderizados
+      const cards = document.querySelectorAll("#colecoes-container .colecao-card");
+
+      cards.forEach(card => {
+        const titulo = card.querySelector(".card-title").textContent.toLowerCase();
+        const descricao = card.querySelector(".desc").textContent.toLowerCase();
+
+        if (titulo.includes(termo) || descricao.includes(termo)) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      });
     });
 
   } catch (error) {
