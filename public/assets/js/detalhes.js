@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const params = new URLSearchParams(window.location.search);
-  const id = parseInt(params.get("id"));
+  const id = params.get("id"); // UUIDs devem ser tratados como string
 
-  if (!id || isNaN(id)) {
+  if (!id) {
     mostrarErro("ID inválido ou não informado.");
     return;
   }
@@ -51,7 +51,8 @@ async function buscarItemPorId(id) {
       if (!response.ok) throw new Error(`Erro ao buscar dados em ${url}`);
 
       const data = await response.json();
-      const item = data.find(obj => Number(obj.id) === id);
+      // Comparar como string, não como número
+      const item = data.find(obj => obj.id === id);
       if (item) return item;
     } catch (error) {
       console.error(`Erro ao buscar em ${url}:`, error);

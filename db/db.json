@@ -1,27 +1,35 @@
-{ "usuarios": [
+{
+  "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Admin",
       "username": "admin",
       "email": "admin@gmail.com",
       "senha": "123456"
+    },
+    {
+      "id": "3863",
+      "nome": "Eliza Swire",
+      "username": "Lizzie333",
+      "email": "lizas@email.com",
+      "senha": "cats"
     }
   ],
   "colecoes": [
     {
-      "id": "1",
-      "titulo": "Vive la Cocotte | FW1995",
-      "descricao": "Corsets vitorianos e saias esvoaçantes reafirmam o domínio de Westwood sobre o passado reinventado.",
+      "titulo": "Vive la Cocotte | FWinter1995",
+      "descricao": "Apresentada na primavera/verão de 1995, a coleção 'Vive la Cocotte' revisitou a moda vitoriana com u...",
       "conteudo": "Apresentada na primavera/verão de 1995, a coleção 'Vive la Cocotte' revisitou a moda vitoriana com um toque provocante e teatral. Corsets estruturados, saias amplas e tecidos leves criaram uma estética que mistura sensualidade e história.",
       "categoria": "Coleções destaque",
-      "autor": "Vivienne Westwood",
       "destaque": true,
-      "data": "1995-09-15",
+      "data": "2025-12-07",
       "imagem_principal": "./assets/imagens/bannerfw1995.jpg",
       "imagens_complementares": [
-        { "id": 1, "src": "./assets/imagens/vivispring1995rtw.PNG", "descricao": "Desfile Vive la Cocotte SS1995" },
-        { "id": 2, "src": "./assets/imagens/VIVIENNE-WESTWOOD-FALL-1995-RTW-035.webp", "descricao": "Desfile Vive la Cocotte FW1995" }
-      ]
+        {
+          "src": "./assets/imagens/bannerfw1995.jpg"
+        }
+      ],
+      "id": "1"
     },
     {
       "id": "2",
@@ -34,8 +42,16 @@
       "data": "1993-03-12",
       "imagem_principal": "./assets/imagens/fw93anglomania.jpg",
       "imagens_complementares": [
-        { "id": 1, "src": "./assets/imagens/vivifall1993.jpg", "descricao": "Look da coleção Anglomania FW1993" },
-        { "id": 2, "src": "./assets/imagens/VIVIENNE-WESTWOOD-FALL-1993-RTW-33.webp", "descricao": "Look da coleção Anglomania FW1993" }
+        {
+          "id": 1,
+          "src": "./assets/imagens/vivifall1993.jpg",
+          "descricao": "Look da coleção Anglomania FW1993"
+        },
+        {
+          "id": 2,
+          "src": "./assets/imagens/VIVIENNE-WESTWOOD-FALL-1993-RTW-33.webp",
+          "descricao": "Look da coleção Anglomania FW1993"
+        }
       ]
     },
     {
@@ -49,8 +65,16 @@
       "data": "1994-10-01",
       "imagem_principal": "./assets/imagens/FW9495Onlibertybanner.jpg",
       "imagens_complementares": [
-        { "id": 1, "src": "./assets/imagens/vivifall1994.jpg", "descricao": "Detalhe da passarela Café Society FW1994" },
-        { "id": 2, "src": "./assets/imagens/VIVINENNE-WESTWOOD-FALL-1994-039.webp", "descricao": "Detalhe da passarela Café Society FW1994" }
+        {
+          "id": 1,
+          "src": "./assets/imagens/vivifall1994.jpg",
+          "descricao": "Detalhe da passarela Café Society FW1994"
+        },
+        {
+          "id": 2,
+          "src": "./assets/imagens/VIVINENNE-WESTWOOD-FALL-1994-039.webp",
+          "descricao": "Detalhe da passarela Café Society FW1994"
+        }
       ]
     }
   ],
@@ -66,7 +90,11 @@
       "data": "2023-04-10",
       "imagem_principal": "./assets/imagens/tinyorb.jpg",
       "imagens_complementares": [
-        { "id": 1, "src": "./assets/imagens/tinyorb.jpg", "descricao": "Pingente Tiny Orb em close" }
+        {
+          "id": 1,
+          "src": "./assets/imagens/tinyorb.jpg",
+          "descricao": "Pingente Tiny Orb em close"
+        }
       ]
     },
     {
@@ -80,7 +108,11 @@
       "data": "2023-06-22",
       "imagem_principal": "./assets/imagens/PLATINUM-CRYSTAL-Crystal_002_large.jpg",
       "imagens_complementares": [
-        { "id": 1, "src": "./assets/imagens/PLATINUM-CRYSTAL-Crystal_002_large.jpg", "descricao": "Detalhe do Crystal Necklace" }
+        {
+          "id": 1,
+          "src": "./assets/imagens/PLATINUM-CRYSTAL-Crystal_002_large.jpg",
+          "descricao": "Detalhe do Crystal Necklace"
+        }
       ]
     },
     {
@@ -94,7 +126,11 @@
       "data": "2024-02-08",
       "imagem_principal": "./assets/imagens/hazelbag.jpg",
       "imagens_complementares": [
-        { "id": 1, "src": "./assets/imagens/hazelbag.jpg", "descricao": "Bolsa Hazel em couro estruturado" }
+        {
+          "id": 1,
+          "src": "./assets/imagens/hazelbag.jpg",
+          "descricao": "Bolsa Hazel em couro estruturado"
+        }
       ]
     }
   ]

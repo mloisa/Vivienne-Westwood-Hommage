@@ -16,11 +16,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     const acessoriosContainer = document.getElementById("acessorios-container");
     const carousel = document.getElementById("carousel-itens");
 
+    // Limpa containers antes de popular (evita duplicação se recarregar)
+    colecoesContainer.innerHTML = "";
+    acessoriosContainer.innerHTML = "";
+    carousel.innerHTML = "";
+
     // ==========================
     //   RENDER COLEÇÕES
     // ==========================
     colecoes.forEach((colecao, index) => {
-      if (!colecao.id) colecao.id = gerarId();
+      //if (!colecao.id) colecao.id = gerarId();
 
       // CARROSSEL
       if (colecao.destaque) {
@@ -38,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       // CARD
       colecoesContainer.innerHTML += `
         <div class="col">
-          <div class="card h-100" data-id="${colecao.id}">
+          <div class="card colecao-card h-100" data-id="${colecao.id}">
             <img src="${colecao.imagens_complementares[0].src}"
                  class="card-img-top img-fluid" alt="${colecao.titulo}">
 
@@ -86,15 +91,38 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (error) {
     console.error("Erro ao carregar os dados do servidor:", error);
   }
+
+  //Buscar entidade principal
+  const inputBusca = document.getElementById("busca-colecoes");
+
+  if (inputBusca) {
+    inputBusca.addEventListener("input", () => {
+      const termo = inputBusca.value.toLowerCase();
+      // Use o seletor com a classe correta 'colecao-card' adicionada aos cards de coleção
+      const cards = document.querySelectorAll("#colecoes-container .colecao-card");
+
+      cards.forEach(card => {
+        const titulo = card.querySelector(".card-title").textContent.toLowerCase();
+        const desc = card.querySelector(".desc").textContent.toLowerCase();
+
+        card.style.display = (titulo.includes(termo) || desc.includes(termo))
+          ? ""
+          : "none";
+      });
+    });
+  }
 });
 
-//Favs
+// FAVORITOS
+
 function iniciarClicksFavoritos() {
   document.addEventListener("click", (event) => {
     const btn = event.target.closest(".favorite-btn");
     if (!btn) return;
 
     const card = btn.closest(".card");
+    if (!card) return;
+
     const cardId = card.dataset.id;
 
     card.classList.toggle("fav");
@@ -123,8 +151,10 @@ function carregarFavoritos() {
     if (card) {
       card.classList.add("fav");
       const btn = card.querySelector(".favorite-btn");
-      btn.classList.add("favorited");
-      btn.querySelector(".icon").textContent = "❤";
+      if (btn) {
+        btn.classList.add("favorited");
+        btn.querySelector(".icon").textContent = "❤";
+      }
     }
   });
 }
